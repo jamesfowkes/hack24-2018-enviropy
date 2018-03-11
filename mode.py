@@ -15,6 +15,7 @@ mode_data = {mode_name: Mode.from_json(mode_name, mode_json) for mode_name, mode
 def get_mode(mode):
     GOOGLE_TYPE_TO_MODE_MAP = {
         "DRIVING": "medium diesel car",
+        "CAR": "medium diesel car",
         "TRAIN": "diesel train",
         "METRO_RAIL": "diesel train",
         "HEAVY_RAIL": "diesel train",
