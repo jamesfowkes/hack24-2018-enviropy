@@ -34,10 +34,10 @@ class Modifiers(namedtuple("Modifiers", ["CO2", "NOX", "POP", "AQI"])):
 
     @classmethod
     def from_kwargs(cls, **kwargs):
-        co2 = kwargs.get("co2", cls.DEFAULT_CO2) 
-        nox = kwargs.get("nox", cls.DEFAULT_NOX)
-        pop = kwargs.get("pop", cls.DEFAULT_POP)
-        aqi = kwargs.get("aqi", cls.DEFAULT_AQI)
+        co2 = max(kwargs.get("co2", cls.DEFAULT_CO2), cls.DEFAULT_CO2)
+        nox = max(kwargs.get("nox", cls.DEFAULT_NOX), cls.DEFAULT_NOX)
+        pop = max(kwargs.get("pop", cls.DEFAULT_POP), 1)
+        aqi = max(kwargs.get("aqi", cls.DEFAULT_AQI), 1)
         return cls(co2, nox, pop, aqi)
 
 def get_scores(data, distance_in_km, **kwargs):
