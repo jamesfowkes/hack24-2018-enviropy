@@ -45,6 +45,8 @@ def get_scores(data, distance_in_km, **kwargs):
     co2_per_km = data.co2
     nox_per_km = data.nox
 
+    distance_in_km = max(distance_in_km, 0.1)
+    
     co2_score = 1/(co2_per_km * distance_in_km * mods.CO2)
     nox_score = 1/(nox_per_km * distance_in_km * mods.NOX * mods.POP * mods.AQI)
 
