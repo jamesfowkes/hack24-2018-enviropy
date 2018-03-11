@@ -16,8 +16,8 @@ def get_mode(mode):
     GOOGLE_TYPE_TO_MODE_MAP = {
         "DRIVING": "medium diesel car",
         "TRAIN": "diesel train",
-        "RAIL": "diesel train",
         "METRO_RAIL": "diesel train",
+        "HEAVY_RAIL": "diesel train",
         "TRAM": "tram",
         "RAIL": "diesel train",
         "BUS": "bus",
